@@ -1,6 +1,6 @@
 ﻿using System;
 namespace Entities {
-    class Product : IComparable<Product> {
+    class Product {
         public string Name { get; set; }
         public double Price { get; set; }
 
@@ -11,10 +11,6 @@ namespace Entities {
 
         public override string ToString() {
             return Name + ", " + Price.ToString("F2");
-        }
-
-        public int CompareTo(Product other) {
-            return Name.ToUpper().CompareTo(other.Name.ToUpper());
         }
     }
 }
